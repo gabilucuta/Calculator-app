@@ -1,0 +1,363 @@
+/* - Very dark desaturated blue (main background): hsl(222, 26%, 31%)
+- Very dark desaturated blue (toggle background, keypad background): hsl(223, 31%, 20%)
+- Very dark desaturated blue (screen background): hsl(224, 36%, 15%)
+
+#### Keys
+
+- Desaturated dark blue (key background): hsl(225, 21%, 49%)
+- Desaturated dark blue (key shadow): hsl(224, 28%, 35%)
+
+- Red (key background, toggle): hsl(6, 63%, 50%)
+- Dark red (key shadow): hsl(6, 70%, 34%)
+
+- Light grayish orange (key background): hsl(30, 25%, 89%)
+- Grayish orange (key shadow): hsl(28, 16%, 65%)
+
+#### Text
+
+- Very dark grayish blue: hsl(221, 14%, 31%)
+- White: hsl(0, 0%, 100%)
+
+### Theme 2
+
+#### Backgrounds
+
+- Light gray (main background): hsl(0, 0%, 90%)
+- Grayish red (toggle background, keypad background): hsl(0, 5%, 81%)
+- Very light gray (screen background): hsl(0, 0%, 93%)
+
+#### Keys
+
+- Dark moderate cyan (key background): hsl(185, 42%, 37%)
+- Very dark cyan (key shadow): hsl(185, 58%, 25%)
+
+- Orange (key background, toggle): hsl(25, 98%, 40%)
+- Dark orange (key shadow): hsl(25, 99%, 27%)
+
+- Light grayish yellow (key background): hsl(45, 7%, 89%)
+- Dark grayish orange (key shadow): hsl(35, 11%, 61%)
+
+#### Text
+
+- Very dark grayish yellow: hsl(60, 10%, 19%)
+- White (text): hsl(0, 0%, 100%)
+
+### Theme 3
+
+#### Backgrounds
+
+- Very dark violet (main background): hsl(268, 75%, 9%)
+- Very dark violet (toggle background, keypad background, screen background): hsl(268, 71%, 12%)
+
+#### Keys
+
+- Dark violet (key background): hsl(281, 89%, 26%)
+- Vivid magenta (key shadow): hsl(285, 91%, 52%)
+
+- Pure cyan (key background, toggle): hsl(176, 100%, 44%)
+- Soft cyan (key shadow): hsl(177, 92%, 70%)
+
+- Very dark violet (key background): hsl(268, 47%, 21%)
+- Dark magenta (key shadow): hsl(290, 70%, 36%)
+
+#### Text
+
+- Light yellow: hsl(52, 100%, 62%)
+- Very dark blue: hsl(198, 20%, 13%)
+- White (text): hsl(0, 0%, 100%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@600&family=League+Spartan:wght@700&display=swap');
+
+.theme-basic
+{
+    --color-back: #3B4664;
+    --color-backnumbs: #181F32;
+    --color-display: #fd6f53;
+    --font-colortop: #ffff;
+    --color-numbers: black;
+    --color-reset: #647299;
+    --color-reset-shadow : #414E6E;
+    --color-equal : #D13F30;
+    --color-equal-shadow: #8F2316;
+    --color-back-numbers:#EAE3DB;
+    --colo-back-numbers-shadow: #B6A49A;
+    --color-del : #ffff;
+    --color-hover: rgba(255, 255, 255, 0.849);
+    --selected-theme1:#D13F30;
+    --selected-theme2: none;
+    --selected-theme3:none;
+
+
+
+}
+ .theme-light
+{
+    --color-back: #E6E6E6;
+    --color-backnumbs: #D3CDCD;
+    --color-display: #EEEEEE;
+    --font-colortop: #38382F;
+    --color-numbers: black;
+    --color-reset: #647299;
+    --color-reset-shadow : #414E6E;
+    --color-equal : #D13F30;
+    --color-equal-shadow: #8F2316;
+    --color-back-numbers:#EAE3DB;
+    --colo-back-numbers-shadow: #B6A49A;
+    --color-del : #ffff;
+    --color-hover: rgba(255, 255, 255, 0.781);
+    --selected-theme2:#D13F30;
+    --selected-theme1: none;
+    --selected-theme3:none;
+}
+
+.theme-dark
+{
+    --color-back: #17062A;
+    --color-backnumbs: #1E0836;
+    --color-display: #1E0836;
+    --font-colortop: #FFE640;
+    --color-numbers: #FFE640;
+    --color-reset: #56077C;
+    --color-reset-shadow : #82209B;
+    --color-equal : #00DECF;
+    --color-equal-shadow: #6CF9F0;
+    --color-back-numbers:#331B4D;
+    --colo-back-numbers-shadow: #802097;
+    --color-del : #ffff;
+    --color-hover: rgba(255, 255, 255, 0.781);
+    --selected-theme3:#00DECF;
+    --selected-theme2: none;
+    --selected-theme1:none;
+
+} 
+
+
+
+
+
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'League Spartan',sans-serif;
+    transition: all 0.4s;
+}
+
+body
+{
+    display: flex;
+    flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-back);
+}
+
+
+.main-container
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 100px;
+ 
+}
+
+.current , .previous
+{
+    color: var(--font-colortop);
+}
+
+.previous
+{
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.current
+{
+    font-size: 20px;
+}
+
+
+.theme-selector
+{
+    display: flex;
+    justify-content: space-between;
+    color: var(--font-colortop);
+}
+
+.select-theme
+{
+    display: flex;
+    align-items: center;
+}
+
+.temm
+{
+    font-size: 10px;
+}
+
+.display
+{
+    width: 100%;
+    padding: 30px;
+    background-color: var(--color-backnumbs);
+    margin: 10px 0px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.them
+{
+    font-size: 10px;
+    margin-right: 10px;
+}
+
+.numb
+{
+    text-align: right;
+    color: var(--font-colortop);
+    letter-spacing: 10px;
+
+}
+
+#display
+{
+    color: var(--font-colortop);
+    grid-column: 1/-1;
+}
+
+.numbers
+{
+    background-color: var(--color-backnumbs);
+    padding: 20px;
+    border-radius: 5px;
+}
+
+
+.numbers-operations
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+}
+
+.number
+{
+    height: 40px;
+    width: 80px;
+    border-radius: 5px;
+    background-color: var(--color-back-numbers);
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    border : none;
+    color: var(--color-numbers);
+    box-shadow: 0px 2px var(--colo-back-numbers-shadow);
+}
+
+.number:hover
+{
+    transition: all 0s;
+    background: var(--color-hover);
+}
+
+.del
+{
+    color: white;
+    background-color: var(--color-reset);
+    box-shadow: 0px 2px var(--color-reset-shadow);
+
+}
+
+.reset-equal
+{
+    height: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 15px 0px 0px 0px;
+    grid-gap: 15px;
+}
+
+.reset
+{
+    background-color: var(--color-reset);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 2px var(--color-reset-shadow);
+
+}
+.reset:hover
+{
+    transition: all 0s;
+    background: var(--color-hover);
+}
+.equal:hover
+{
+    transition: all 0s;
+    background: var(--color-hover);
+}
+
+.equal
+{
+    background: var(--color-equal);
+    border-radius: 5px;
+    border : none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 2px var(--color-equal-shadow);
+}
+
+.themes
+{
+    text-decoration: none;
+}
+
+.select
+{
+    background-color: #252D44;
+    border-radius: 10px;
+    padding: 1px 3px;
+}
+
+.select button
+{
+    background-color:  #252D44;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    margin: 3px 3px 0px 3px;
+    border: none;
+    cursor: pointer;
+}
+
+#basic
+{
+    background-color: var(--selected-theme1);
+}
+
+#light
+{
+    background-color: var(--selected-theme2);
+}
+
+#dark
+{
+    background-color: var(--selected-theme3);
+}
+
+
+#basic:hover , #light:hover , #dark:hover
+{
+    background-color: #D13F30;
+}
+
+
+
